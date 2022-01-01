@@ -1,0 +1,28 @@
+{
+    "name": "chase/fig",
+    "description": "Keep bots and unwanted humans away from your website",
+    "type": "library",
+    "keywords": [
+        "csrf",
+        "anti-csrf",
+        "anti csrf",
+        "php",
+        "php csrf"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Paul Robert",
+            "email": "paul.contrib@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Chase\\": "Chase/"
+        },
+        "files": []
+    },
+    "require": {
+        "php": ">=7.0.0"
+    }
+}
