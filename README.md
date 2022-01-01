@@ -6,9 +6,11 @@
 ![contributors](https://img.shields.io/github/languages/code-size/phrenotype/figleaf)
 ![downloads](https://img.shields.io/packagist/dm/chase/figleaf)  
 
-This library only allows (actual) browsers to access your website content (like forms) or send requests and greatly increases the cost of brute force attacks on your web forms, in some cases, eliminating it. All these without using rate limiting. 
-
+This library keeps bots and unwanted humans from making requests to your website.
+ 
 It offers full csrf token generation and validation, without external dependencies. Moreover, it stores the token in the `$_SERVER` super global, hence eliminating the need to start a session.
+
+With this, a brute force attack is only possible with browser automation, hence increased cost.
 
 ## Install  
 `composer require chase/figleaf`  
