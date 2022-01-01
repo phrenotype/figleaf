@@ -2,6 +2,9 @@
 
 namespace Chase\FigLeaf;
 
+/**
+ * Csrf for humans - robots and unwanted humans left out.
+ */
 class FigLeaf
 {
     const TOKEN_NAME = '__chase_figleaf_token';
@@ -17,17 +20,38 @@ class FigLeaf
         return self::$__token;
     }
 
+    /**
+     * Get a csrf token string.
+     * 
+     * @param bool $regenerate Optional. This determines whether a new value should be generated or the old one returned.
+     * 
+     * @return string
+     */
     public static function token(bool $regenerate = true): string
     {
         return self::generate($regenerate);
     }
 
+    /**
+     * Get a csrf token in an html input field.
+     * 
+     * @param bool $regenerate This determines whether a new value should be generated or the old one returned.
+     * 
+     * @return string
+     */
     public static function input(bool $regenerate = true): string
     {
         $token = self::generate($regenerate);
         return '<input type="hidden" name="' . self::TOKEN_NAME . '" value="' . $token . '"/>';
     }
 
+    /**
+     * Validate the csrf token.
+     * 
+     * @param array $global
+     * 
+     * @return Validator
+     */
     public static function validate(array $global): Validator
     {
         return new Validator($_SERVER[self::TOKEN_NAME], ($global[self::TOKEN_NAME] ?? ''));
