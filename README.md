@@ -75,7 +75,7 @@ if($validator->failed()){
 ```  
 
 ## Recommendation  
-It is highly recommeded you always generate new tokens. Otherwise, this whole 'keeping bots and unwanted humans' away thing will just be an empty promise.
+It is highly recommeded you always generate new tokens per request, otherwise, this whole 'keeping bots and unwanted humans' away thing will just be an empty promise.
 
 ## Contact  
 **Email** : paul.contrib@gmail.com
