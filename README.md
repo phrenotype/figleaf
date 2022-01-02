@@ -8,7 +8,7 @@
 
 This library keeps bots and unwanted humans from making requests to your website.
  
-It offers full csrf token generation and validation, without external dependencies. Moreover, it stores the token in the `$_SERVER` super global, hence eliminating the need to start a session.
+It offers full csrf token generation and validation, without external dependencies.
 
 With this, a brute force attack is only possible with browser automation, hence increased cost.
 

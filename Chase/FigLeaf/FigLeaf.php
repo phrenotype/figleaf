@@ -13,9 +13,15 @@ class FigLeaf
 
     private static function generate(bool $regenerate = true): string
     {
+        if (session_status() == PHP_SESSION_NONE) {
+            session_name('figleaf_session');
+            session_start();
+        } else {
+            session_regenerate_id();
+        }
         if (self::$__token == null || $regenerate) {
             self::$__token = bin2hex(random_bytes(30));
-            $_SERVER[self::TOKEN_NAME] = self::$__token;
+            $_SESSION[self::TOKEN_NAME] = self::$__token;
         }
         return self::$__token;
     }
@@ -54,6 +60,6 @@ class FigLeaf
      */
     public static function validate(array $global): Validator
     {
-        return new Validator($_SERVER[self::TOKEN_NAME], ($global[self::TOKEN_NAME] ?? ''));
+        return new Validator($_SESSION[self::TOKEN_NAME], ($global[self::TOKEN_NAME] ?? ''));
     }
 }
