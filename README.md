@@ -1,9 +1,7 @@
 # FigLeaF
-![github stars](https://img.shields.io/github/stars/phrenotype/figleaf?style=social)
-![packagist stars](https://img.shields.io/packagist/stars/chase/figleaf)
 ![license](https://img.shields.io/github/license/phrenotype/figleaf)
 ![contributors](https://img.shields.io/github/contributors/phrenotype/figleaf)
-![contributors](https://img.shields.io/github/languages/code-size/phrenotype/figleaf)
+![code size](https://img.shields.io/github/languages/code-size/phrenotype/figleaf)
 ![downloads](https://img.shields.io/packagist/dm/chase/figleaf)  
 
 This library keeps bots and unwanted humans from making requests to your website.
