@@ -64,7 +64,7 @@ After a form is submitted or a request is sent by a user, you validate it by pas
 
 use Chase\FigLeaf\FigLeaf;
 
-$validator = Figleaf::validate($_REQUEST)
+$validator = Figleaf::validate($_REQUEST);
 
 if($validator->passed()){
     // Do something
