@@ -33,7 +33,6 @@ echo $token;
 
 To get the current or old token value use `FigLeaf::token()`.  
 
-
 To generate a hidden input field  
 
 ```php
