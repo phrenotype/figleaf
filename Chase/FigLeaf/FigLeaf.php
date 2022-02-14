@@ -13,17 +13,20 @@ class FigLeaf
 
     private static function generate(bool $regenerate = true): string
     {
-        if (session_status() == PHP_SESSION_NONE) {
-            session_name('figleaf_session');
-            session_start();
-        } else {
-            session_regenerate_id();
+        $tmp_token = bin2hex(random_bytes(50));
+        if (isset($_SESSION)) {
+            if (session_status() == PHP_SESSION_NONE) {
+                session_name('figleaf_session');
+                session_start();
+            } else {
+                session_regenerate_id();
+            }
+            if (self::$__token == null || $regenerate) {
+                self::$__token = $tmp_token;
+                $_SESSION[self::TOKEN_NAME] = self::$__token;
+            }
         }
-        if (self::$__token == null || $regenerate) {
-            self::$__token = bin2hex(random_bytes(30));
-            $_SESSION[self::TOKEN_NAME] = self::$__token;
-        }
-        return self::$__token;
+        return $tmp_token;
     }
 
     /**
