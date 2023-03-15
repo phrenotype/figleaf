@@ -7,7 +7,8 @@ namespace FigLeaf;
  */
 class FigLeaf
 {
-    const TOKEN_NAME = '__chase_figleaf_token';
+    const TOKEN_NAME = '__figleaf_token';
+    const SESSION_NAME = 'figleaf_session';
 
     private static $__token;
 
@@ -16,7 +17,7 @@ class FigLeaf
         $tmp_token = bin2hex(random_bytes(50));
         if (isset($_SESSION)) {
             if (session_status() == PHP_SESSION_NONE) {
-                session_name('figleaf_session');
+                session_name(self::SESSION_NAME);
                 session_start();
             } else {
                 session_regenerate_id();

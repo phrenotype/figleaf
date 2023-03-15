@@ -46,7 +46,7 @@ echo $input;
 ```  
 
 ```html
-<input type="hidden" name="__chase_figleaf_token" value="36ea3cb936ea66dbe4fc50444176a84c8138f76859467b86986efb53f1d6"/>
+<input type="hidden" name="__figleaf_token" value="36ea3cb936ea66dbe4fc50444176a84c8138f76859467b86986efb53f1d6"/>
 ```  
 Again, to get an input based on the old or current value, use `FigLeaf::input()`.
 
