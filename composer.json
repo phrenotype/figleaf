@@ -1,5 +1,5 @@
 {
-    "name": "chase/figleaf",
+    "name": "figleaf/figleaf",
     "description": "Keep bots and unwanted humans away from your website",
     "type": "library",
     "keywords": [
@@ -18,7 +18,7 @@
     ],
     "autoload": {
         "psr-4": {
-            "Chase\\": "Chase/"
+            "FigLeaf\\": "FigLeaf/"
         },
         "files": []
     },

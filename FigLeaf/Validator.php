@@ -1,6 +1,6 @@
 <?php
 
-namespace Chase\FigLeaf;
+namespace FigLeaf;
 
 /**
  * Csrf validator for good humans.

@@ -11,7 +11,7 @@ It offers full csrf token generation and validation, without external dependenci
 With this, a brute force attack is only possible with browser automation, hence increased cost.
 
 ## Install  
-`composer require chase/figleaf`  
+`composer require figleaf/figleaf`  
 
 ## Usage
 
@@ -20,7 +20,7 @@ To generate a csrf token for some random use ( you decide )
 ```php
 <?php
 
-use Chase\FigLeaf\FigLeaf;
+use FigLeaf\FigLeaf;
 
 $token = FigLeaf::token(true);
 
@@ -38,7 +38,7 @@ To generate a hidden input field
 ```php
 <?php
 
-use Chase\FigLeaf\FigLeaf;
+use FigLeaf\FigLeaf;
 
 $input = FigLeaf::input(true);
 
@@ -59,7 +59,7 @@ After a form is submitted or a request is sent by a user, you validate it by pas
 ```php
 <?php
 
-use Chase\FigLeaf\FigLeaf;
+use FigLeaf\FigLeaf;
 
 $validator = Figleaf::validate($_REQUEST);
 

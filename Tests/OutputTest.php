@@ -1,7 +1,7 @@
 <?php
 
-use Chase\FigLeaf\FigLeaf;
-use Chase\FigLeaf\Validator;
+use FigLeaf\FigLeaf;
+use FigLeaf\Validator;
 use PHPUnit\Framework\TestCase;
 
 class OutputTest extends TestCase

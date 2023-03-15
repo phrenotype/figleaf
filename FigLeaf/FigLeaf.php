@@ -1,6 +1,6 @@
 <?php
 
-namespace Chase\FigLeaf;
+namespace FigLeaf;
 
 /**
  * Csrf for humans - robots and unwanted humans left out.
